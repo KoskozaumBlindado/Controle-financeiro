@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gastos Minimalista</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="tela-login" class="container tela ativa">
+        <h1>Bem-vindo!</h1>
+        <p>Faça login para gerenciar suas finanças.</p>
+        <form id="login-form">
+            <input type="text" id="usuario" placeholder="Usuário (admin)">
+            <input type="password" id="senha" placeholder="Senha (1234)">
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <div id="tela-principal" class="container tela">
+        <h1>Controle Financeiro</h1>
+        <input type="number" id="renda-mensal" placeholder="Digite sua renda mensal">
+        <div id="resumo">
+            <div>Despesas<span id="total-despesas">R$ 0,00</span></div>
+            <div>Saldo<span id="saldo">R$ 0,00</span></div>
+        </div>
+        
+        <form id="despesa-form">
+            <h2>Nova Despesa</h2>
+            <input type="text" id="descricao-despesa" placeholder="Descrição da despesa">
+            <input type="number" id="valor-despesa" placeholder="Valor (R$)">
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <h2>Histórico</h2>
+        <ul id="lista-despesas"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
